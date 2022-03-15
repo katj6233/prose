@@ -1,7 +1,18 @@
 :root {
   /* Font scale heading */
+  --heading-font-size-xl: 5rem;
+  --heading-font-size-lg: 2.5rem;
+  --heading-font-size-md: 1.5rem;
+  --heading-font-size-sm: 1.2rem;
+
+  --font-weight-default: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 800;
 
   /* Font scale body text */
+  --text-font-size-lg: 1.333rem;
+  --text-font-size-md: 1rem;
+  --text-font-size-sm: 0.75rem;
 
   /* Spacing */
   --spacing-10: 0.625rem;
@@ -12,6 +23,34 @@
   --spacing-80: 5rem;
 
   /* Aliases */
+
+  /* h1 */
+  --heading-display: var(--heading-font-size-xl);
+  --heading-display-weight: var(--font-weight-bold);
+  --heading-display-space: var(--spacing-20);
+
+  /* h2 */
+  --heading-display-h2: var(--heading-font-size-lg);
+  --headingh2-display-weight: var(--font-weight-bold);
+
+  /* h3 */
+  --heading-display-h3: var(--heading-font-size-md);
+  --headingh3-display-weight: var(--font-weight-default);
+
+  /* h4 */
+  --heading-display-h4: var(--heading-font-size-sm);
+  --headingh3-display-weight: var(--font-weight-default);
+
+  /* text lead */
+  --text-display: var(--text-font-size-lg);
+  --text-display-weight: var(--font-weight-semibold);
+
+  /* almindelig text */
+  --text-paragraph: var(--text-font-size-md);
+  --space-text: var(--spacing-30);
+
+  /* text */
+  --text-paragraph-small: var(--text-font-size-sm);
 }
 
 body {
@@ -21,20 +60,50 @@ body {
 
 h1,
 .heading-h1 {
+  font-size: var(--heading-display);
+  font-weight: var(--heading-display-weight);
+  margin-bottom: var(--heading-display-space);
 }
 
 h2,
 .heading-2 {
+  font-size: var(--heading-display-h2);
+  font-weight: var(--headingh2-display-weight);
+  margin-block: var(--heading-display-space);
 }
 
 h3,
 .heading-3 {
+  font-size: var(--heading-display-h3);
+  font-weight: var(--headingh2-display-weight);
+  margin-block: var(--heading-display-space);
+}
+
+h4,
+.heading-4 {
+  font-size: var(--heading-display-h4);
+  font-weight: var(--headingh2-display-weight);
+  margin-block: var(--heading-display-space);
 }
 
 .text-lead {
+  font-size: var(--text-display);
+  font-weight: var(--font-weight-semibold);
+  margin-block: var(--heading-display-space);
+  line-height: var(--space-text);
 }
 
 .text-small {
+  font-size: var(--text-paragraph-small);
+}
+
+p {
+  font-size: var(--text-paragraph);
+  line-height: var(--space-text);
+}
+
+.img {
+  margin-block: var(--heading-display-space);
 }
 
 article {
